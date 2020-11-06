@@ -99,11 +99,6 @@ final class PhotoLibraryService {
 
     }
 
-    static func hasPermission() -> Bool {
-        return PHPhotoLibrary.authorizationStatus() == .authorized
-
-    }
-
     func getLibrary(_ options: PhotoLibraryGetLibraryOptions, completion: @escaping (_ result: [NSDictionary], _ chunkNum: Int, _ isLastChunk: Bool) -> Void) {
 
         if(options.includeCloudData == false) {
